@@ -16,7 +16,7 @@ public class ContaPoupança extends Conta{
         }
     }
 
-    /*
+    /* Criei de maneira opcional por isso esta comentado
     public void alterarTaxaRendimento(double Taxa) {
         this.TaxaRendimento = Taxa;
     }
