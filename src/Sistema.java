@@ -54,7 +54,6 @@ public class Sistema {
                 case 2:
                     System.out.print("Número da conta: ");
                     int numDep = sc.nextInt();
-                    sc.nextLine();
 
                     Conta contaDeposito = bancoUnidos.buscarPorNumero(numDep);
                     if (contaDeposito == null) {
@@ -62,7 +61,6 @@ public class Sistema {
                     } else {
                         System.out.print("Valor do depósito: ");
                         double valorDep = sc.nextDouble();
-                        sc.nextLine();
                         contaDeposito.depositar(valorDep);
                         System.out.println("Deposito feito com sucesso!");
                     }
@@ -82,6 +80,7 @@ public class Sistema {
 
                         if (contaSaq instanceof ContaCorrente) { //Obs: essa parte foi feita com ajuda de IA
                             ((ContaCorrente) contaSaq).sacarComLimite(valorSaq);
+                            System.out.print("Saque feito com sucesso!");
                         } else {
                             contaSaq.sacar(valorSaq);
                         }
@@ -98,6 +97,7 @@ public class Sistema {
                         System.out.println("Conta não encontrada!");
                     } else if (contaRend instanceof ContaPoupança) { //Obs: essa parte foi feita com ajuda da IA
                         ((ContaPoupança) contaRend).aplicarRendimento();
+                        System.out.println("Rendimento aplicado com sucesso!");
                     } else {
                         System.out.println("Essa conta não é poupança!");
                     }
